@@ -1,0 +1,26 @@
+<form action="" class="col-md-4 offset-4 mt-4 mb-5 card card-body" #form="ngForm" (ngSubmit)="loginData(form)">
+    <h1 class="bg-primary text-white text-center">TemplateForm</h1> 
+    <div class="form-group">
+
+        <input type="text" name="pleaselogin" id="pleaselogin" placeholder="Please Login" class="form-control" #pleaselogin="ngModel" ngModel required>
+        <div *ngIf="pleaselogin.touched && pleaselogin.invalid">
+            <p class="alert alert-danger" *ngIf="pleaselogin.errors.required">*this field is required</p>
+    </div>
+</div>
+<div class="form-group">
+<input type="email" name="email" id="email" class="form-control" placeholder="Enter Email" #email="ngModel" ngModel required>
+        <div *ngIf="email.touched && email.invalid">
+            <p class="alert alert-danger" *ngIf="email.errors.required">*this field is required</p>
+    </div>
+</div>
+
+<div class="form-group">
+        <input type="password" name="password" id="password" class="form-control" placeholder="Enter Password" #password="ngModel" ngModel required>
+                <div *ngIf="password.touched && password.invalid">
+                    <p class="alert alert-danger" *ngIf="password.errors.required">*this field is required</p>
+            </div>
+        </div>
+        <div class="form-group">
+                <button type="submit" class="btn btn-outline-success float-right"[disabled]="form.invalid">Login</button>
+        </div>
+</form>
