@@ -1,0 +1,243 @@
+show databases;
+
+mysql> use company1;
+Database changed
+mysql> show tables;
+Empty set (0.06 sec)
+
+mysql> create table product(pid int ,pname varchar(100),quantity int);
+Query OK, 0 rows affected (0.52 sec)
+
+mysql> show tables;
++--------------------+
+| Tables_in_company1 |
++--------------------+
+| product            |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> desc product;
++----------+--------------+------+-----+---------+-------+
+| Field    | Type         | Null | Key | Default | Extra |
++----------+--------------+------+-----+---------+-------+
+| pid      | int(11)      | YES  |     | NULL    |       |
+| pname    | varchar(100) | YES  |     | NULL    |       |
+| quantity | int(11)      | YES  |     | NULL    |       |
++----------+--------------+------+-----+---------+-------+
+3 rows in set (0.13 sec)
+
+mysql> drop datbase company1;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'datbase company1' at line 1
+mysql> drop database company1;
+Query OK, 1 row affected (0.25 sec)
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| bookmyshow         |
+| company            |
+| mysql              |
+| performance_schema |
+| sample             |
+| test               |
++--------------------+
+7 rows in set (0.00 sec)
+
+mysql> create database ust_db;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| bookmyshow         |
+| company            |
+| mysql              |
+| performance_schema |
+| sample             |
+| test               |
+| ust_db             |
++--------------------+
+8 rows in set (0.00 sec)
+
+mysql> use ust_db;
+Database changed
+mysql> show tables;
+Empty set (0.00 sec)
+
+mysql> create table product(pid int,pname varchar(10), quantity int);
+Query OK, 0 rows affected (0.09 sec)
+
+mysql> show tables;
++------------------+
+| Tables_in_ust_db |
++------------------+
+| product          |
++------------------+
+1 row in set (0.00 sec)
+
+mysql> desc product;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| pid      | int(11)     | YES  |     | NULL    |       |
+| pname    | varchar(10) | YES  |     | NULL    |       |
+| quantity | int(11)     | YES  |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+mysql> drop table product;
+Query OK, 0 rows affected (0.08 sec)
+
+mysql> show tables;
+Empty set (0.02 sec)
+
+mysql> create table product(pid int,pname varchar(10), quantity int);
+Query OK, 0 rows affected (0.11 sec)
+
+mysql> show tables;
++------------------+
+| Tables_in_ust_db |
++------------------+
+| product          |
++------------------+
+1 row in set (0.00 sec)
+
+mysql> desc product;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| pid      | int(11)     | YES  |     | NULL    |       |
+| pname    | varchar(10) | YES  |     | NULL    |       |
+| quantity | int(11)     | YES  |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+mysql> alter table product add column price int;
+Query OK, 0 rows affected (0.59 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc product;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| pid      | int(11)     | YES  |     | NULL    |       |
+| pname    | varchar(10) | YES  |     | NULL    |       |
+| quantity | int(11)     | YES  |     | NULL    |       |
+| price    | int(11)     | YES  |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> alter table product change column price cost int;
+Query OK, 0 rows affected (0.22 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc tables;
+ERROR 1146 (42S02): Table 'ust_db.tables' doesn't exist
+mysql> desc product;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| pid      | int(11)     | YES  |     | NULL    |       |
+| pname    | varchar(10) | YES  |     | NULL    |       |
+| quantity | int(11)     | YES  |     | NULL    |       |
+| cost     | int(11)     | YES  |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> alter table product drop column cost;
+Query OK, 0 rows affected (0.17 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc product;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| pid      | int(11)     | YES  |     | NULL    |       |
+| pname    | varchar(10) | YES  |     | NULL    |       |
+| quantity | int(11)     | YES  |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+3 rows in set (0.01 sec)
+
+mysql>
+rename table product to product_info;
+ rename database ust_db to UST;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'database ust_db to UST' at line 1
+
+ select distinct designation from employee;
+
+ select distinct designation,deptno from employee;
+
+update employee set designation='tests' where eid=1;
+update employee set mobno=99909 where eid=2;
+
+delete from employee  where eid=9;
+select * from employee where eid=1;
+
+select sal+5000 from employee;
+select sal+5000 increment from employee;
+
+select sal-5000 from employee;
+select sal-5000 decrement from employee;
+select (sal*12) anualsal from employee;
+ select (sal/30) perday from employee;
+select * from employee where designation='tests';
+select * from employee where deptno <>30;
+select * from employee where deptno !=20;
+select * from employee where sal>30000;
+select * from employee where sal<30000;
+select * from employee where age<21;
+select ename,sal,email,sal from employee where age>=22;
+ select * from employee where sal<=40000;
+
+
+select * from employee where deptno=20 AND sal>25000;
+select ename,sl from employee where deptno=10 and deptno=20;
+select * from employee where designation='tester' and age=22;
+select * from employee where designation='tester' or sal>30000;
+select ename,sal,age from employee where deptno=20 or deptno=30 or deptno=50;
+select * from employee where age>21 and bldgrp='B+';
+select * from employee where not designation='tester';
+ select * from employee where designation<>'tester';
+select ename from employee where designation='hr' or designation='tester' and sal>40000;
+select * from employee where not (designation='developer' and deptno=40);
+ select * from employee where designation='developer'and (deptno=10 or deptno=40);
+select * from employee where deptno in (40,50,70,80);
+ select * from employee where designation in ('tester','admin','developer') and deptno in(20,30) and sal>30000;
+select * from employee where designation not in ('tester','admin','hr');
+select * from employee where age in(20,25,21,30) and designation not in ('tester','developer');
+ select * from employee where age between 20 and 40;
+ select * from employee where ename like 'A%'
+    -> ;
+ select ename from employee where ename like '_i%';
+ select ename from employee where ename like '%L%L%';
+ select ename from employee where ename like '%A%A%';
+select ename from employee where ename like 'A%h';
+select * from employee where ename like 'a%' or ename like 'm%';
+ select ename ,sal from employee where deptno in (10,20,30) and designation like 'T%';
+
+
+select sum(sal) from employee;
+ select max(sal) from employee;
+ select min(sal) from employee;
+ select avg(sal) from employee;
+ select count(*) from employee;
+select * from employee order by sal Desc;
+
+
+
+ insert into department (deptno,dname,location) values(10,'admin','pune'),(20,'operation','banglore'),(30,'maintainance','chennai'),(40,'development','hyderabad');
+select * from employee where doj=(select doj from employee where ename='ankith');
+select max(sal) from employee where sal<(select max(sal) from employee);
+select ename from employee where deptno in (select deptno from department where location like '%a%');
+select * from employee where deptno in(select deptno from department where dname in ('admin','operation','research'));
+ select max(sal) from employee group by deptno;
+ select max(sal)from employee where designation='hr' group by deptno;
+mysql> select deptno from employee group by deptno having  count(*) >=2;
+
+
+select * from employee cross join department;
+select * from employee e inner join department d on e.deptno=d.deptno;
