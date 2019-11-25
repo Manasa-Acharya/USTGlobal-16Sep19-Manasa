@@ -1,0 +1,5 @@
+package com.ustglobal.assessment.dto;
+
+public class InformationBean {
+
+}
