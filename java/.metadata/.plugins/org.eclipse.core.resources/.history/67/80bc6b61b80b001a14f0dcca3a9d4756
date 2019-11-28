@@ -1,0 +1,5 @@
+package com.ustglobal.jpawithibernatepractices.dto;
+
+public class Student {
+
+}

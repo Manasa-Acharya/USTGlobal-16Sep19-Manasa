@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;com.ustglobal.java8features.predicate.Factorial.java&apos; to &apos;TestA.java&apos;&#x0D;&#x0A;- Original project: &apos;java8features&apos;&#x0D;&#x0A;- Original element: &apos;com.ustglobal.java8features.predicate.Factorial.java&apos;&#x0D;&#x0A;- Renamed element: &apos;com.ustglobal.java8features.predicate.TestA.java&apos;" description="Rename compilation unit &apos;Factorial.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;com.ustglobal.java8features.predicate{Factorial.java" name="TestA.java" references="false" stamp="1572948868590" version="1.0"/>
+</session>

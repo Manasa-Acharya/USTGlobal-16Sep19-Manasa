@@ -1,0 +1,21 @@
+package com.ustglobal.jpawithibernateapp.onetomanyormanytoone;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+import lombok.Data;
+
+@Data
+@Table(name="pencil")
+@Entity
+public class Pencil {
+@Column
+	private int pid;
+
+@Column
+	private String color;
+	
+private PencilBox pencilBox;
+}
+

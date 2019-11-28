@@ -1,0 +1,15 @@
+package com.ustglobal.jpawithibernateapp;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+import com.ustglobal.jpawithibernateapp.dto.Product;
+
+public class ReadDemo {
+	public static void main(String[] args) {
+		EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("test");
+		EntityManager entityManager = entityManagerFactory.createEntityManager();
+		entityManager.find(Product.class,101);
+	}//end of  main method
+}//end of class

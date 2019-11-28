@@ -1,0 +1,5 @@
+INDEX VERSION 1.131
+C:\Users\MANASA\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3111749366.index
+\emplwebapp\src
+C:\Users\MANASA\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2355394687.index
+\webapp\src

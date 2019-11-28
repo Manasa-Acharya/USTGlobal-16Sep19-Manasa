@@ -1,0 +1,5 @@
+package com.ustglobal.jpawithibernateproject.dto;
+
+public class MyFirstHibernateWithProperties {
+
+}

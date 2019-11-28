@@ -1,0 +1,10 @@
+package com.ustglobal.springcore.config;
+
+import com.ustglobal.springcore.di.Book;
+
+public class BookConfiguration {
+	public Book getBook() {
+		Book book = new Book();
+		return book;
+	}
+}
