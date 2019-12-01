@@ -1,0 +1,1 @@
+package com.ustglobale.spring2mvc.beans;
