@@ -1,0 +1,67 @@
+.bg-img {
+    /* The image used */
+    background-image: url(/css/image/susan-iuesm.jpg);
+    height: 400px;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-size: cover;
+  }
+  input[type="text"]{
+    width: 800px;
+    height:50px;
+    margin-left: 330px;
+    margin-top: 50px;
+    border: 1px solid white;
+    text-align: center;
+
+  }
+  .topnav a:hover {
+    background-color:red;
+    color: white;
+  }
+  .topnav{
+      font-size: 25px;
+  }
+  img{
+    width: 230px;
+    height: 300px;
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 20px;
+    margin-left: 10px;
+    margin-top: 10px;
+    box-shadow: 0 0 15px blue;
+    transition: all 3s; /* for smooth effect*/
+  }
+  h1{
+    text-align: center;
+    font-size: 40px;
+    color: white;
+  }
+  h6{
+    text-align: center;
+    font-size: 15px;
+    color: white;
+  }
+  .search h5,h4{
+    text-align: center;
+     color: white;
+  }
+  input[type="button"]{
+    width: 140px;
+    height:40px;
+    margin-left: 650px;
+    margin-top: 40px;
+    border: 1px solid black;
+    text-align: center;
+    background-color: brown;
+    color: white;
+  }
+  .bottom h1,p{
+    margin-top: 15px;
+    text-align: center;
+    color: black;
+  }
+
+  

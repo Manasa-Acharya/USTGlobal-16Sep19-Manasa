@@ -1,0 +1,61 @@
+img{
+    width:258px;
+    height:250px;
+    border:1px solid black;
+    padding:20px;
+    border-radius:20px;
+    margin-left: 10px;
+    margin-top: 10px;
+    box-shadow:0 0 15px blue;
+    
+
+
+}
+/* h3{
+    font-style: normal;
+} */
+#input{
+    width:500px;
+    height:40px;
+    margin-left: 350px;
+}
+#yyyy{
+
+     background-image: url("/image/rose-374318_960_720.jpg");
+     background-size: cover;
+} 
+#spa{
+    
+    font-size: 30px;
+    text-align: center;
+}
+#baa{
+text-align: center;
+}
+#aaaaa{
+    text-align: center;
+
+}
+
+img:hover{
+    transform:scale(1.1,1.1);
+    transition:all 2s;
+}
+button{
+    width:200px;
+    height:70px;
+    background-color: green;
+    margin-left: 600px;
+    
+
+}
+button:hover{
+    transform:scale(1.1,1.1);
+    
+    background-color:green;
+}
+#aa{
+    width:200px;
+    height:100px;
+
+}
