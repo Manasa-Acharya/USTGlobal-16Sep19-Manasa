@@ -1,0 +1,23 @@
+/* #img{
+    margin-left:120px; 
+     margin-right:90px;
+    margin-top:50px;
+    margin-bottom:30px; 
+    width:258px;
+    height:250px;
+    border:1px solid black;
+    padding:20px;
+    border-radius:20px;
+    box-shadow:0 0 15px rgb(43, 202, 11);
+    background-color: aqua;
+
+}
+img:hover{
+    transform:scale(1.1,1.1);
+}
+#hi{
+    font-size: 40px;
+    text-align: center;
+    font-family: fantasy;
+    color: brown;
+} */

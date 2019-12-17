@@ -1,0 +1,34 @@
+<form action="" class="col-md-4 mt-5 mb-5 offset-3 card card-body"#form="ngForm" (ngSubmit)="productData(form)">
+    <h1 class="bg-dark text-white text-center form-group">Form4</h1>
+    <div class="form-group">
+        <input type="text" name="productname" id="productname" class="form-control" placeholder="Product Name"#productname="ngModel" ngModel required>
+        <div *ngIf= "productname.touched && productname.invalid">
+            <p class="alert alert-danger">*this field is required</p>
+        </div>
+    
+    
+    </div>
+    <div class="form-group">
+        <input type="number" name="productprize" id="productprize" class="form-control" placeholder="Product Prize"#productprize="ngModel" ngModel required>
+        <div *ngIf= "productprize.touched && productprize.invalid">
+            <p class="alert alert-danger">*this field is required</p>
+        </div>
+    
+    
+    </div>
+    <div class="form-group">
+        <input type="text" name="productdescription" id="productdescription" class="form-control" placeholder="Product Description" #productdescription="ngModel" ngModel required>
+    </div>
+    <div class="form-group">
+        <input type="url" name="productimageurl" id="productimageurl" class="form-control" placeholder="Product Image URL" #productimageurl="ngModel" ngModel required>
+        <div *ngIf= "productimageurl.touched && productimageurl.invalid">
+            <p class="alert alert-danger">*this field is required</p>
+        </div>
+    
+    
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-outline-success float-right" [disabled]="form.invalid">Add User</button>
+    </div>
+</form>
+
